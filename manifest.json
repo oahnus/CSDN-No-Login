@@ -1,0 +1,23 @@
+{
+    "manifest_version": 2,
+    "name": "*SDN No Login",
+    "version": "0.0.1",
+    "description": "*SDN 文章免登陆查看",
+    "icons": {
+        "16": "img/icon16.ico",
+        "48": "img/icon48.ico",
+        "128": "img/icon128.ico"
+    },
+    "content_security_policy": "script-src 'self' https://unpkg.com; object-src 'self'",
+    "browser_action": {
+        "default_icon": "img/icon16.ico",
+        "default_title": "免登陆插件",
+        "default_popup": "popup.html"
+    },
+    "content_scripts": [{
+        "matches": ["https://blog.csdn.net/*"],
+        "js": ["js/main.js", "js/csdn.js"],
+        "run_at": "document_start"
+    }],
+    "default_locale": "zh_CN"
+}
