@@ -1,8 +1,4 @@
-console.log('csdnjs')
-
-document.addEventListener("beforescriptexecute", function (e) {
-  console.log("Starting script with ID: " + e);
-}, true);
+console.log('xsdnjs')
 
 function getElementByXpath(path) {
   return document.evaluate(path, document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
